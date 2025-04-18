@@ -1,0 +1,176 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure footer stays at the bottom */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #0f4b6e, #48a9e6);
+  color: #fff;
+  line-height: 1.6;
+  padding-top: 50px; /* Space for fixed navbar */
+}
+
+/* Header (Logo + Navbar) */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 20px;
+  color: #fff;
+}
+
+header nav {
+  margin-right: 20px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 12px 20px;
+  margin: 0 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+header nav a:hover {
+  background-color: #ff7f50;
+  border-radius: 5px;
+  color: #fff;
+}
+
+/* Main Section */
+section {
+  margin: 60px 20px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+  font-size: 36px;
+  color: #ff7f50;
+  margin-bottom: 20px;
+}
+
+section h3 {
+  font-size: 28px;
+  color: #f0f8ff;
+  margin-bottom: 10px;
+}
+
+section p {
+  font-size: 18px;
+  color: #d3d3d3;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background: #ff7f50;
+  color: #fff;
+}
+
+table td {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f0f8ff;
+}
+
+table tr:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Footer Styling */
+footer {
+  margin-top: auto;  /* Push the footer to the bottom */
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+/* Extra padding for footer content */
+footer p {
+  font-size: 16px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav {
+    margin-top: 10px;
+  }
+
+  header nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  section {
+    margin-top: 120px; /* Space for fixed header */
+  }
+}
